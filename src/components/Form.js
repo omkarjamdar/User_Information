@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React,{Component} from 'react';
 import PersonalInformation from './PersonalInformation';
 import JobInformation from './JobInformation';
 import Confirm from './Confirm';
@@ -31,26 +31,7 @@ export default class Form extends Component {
     prevStep = () => {
         const { step } = this.state;
         this.setState({ step: step - 1 });
-    };
-
-    nextStep1 = () => {
-        const { step } = this.state;
-        
-        if(this.state.fname ){
-            this.setState({ step: step + 1 });
-            console.log('All ');
-        }
-        else{
-            console.log('All fields are required');
-        }
-        
-    };
-
-    nextStep2 = () => {
-        const { step } = this.state;
-        this.setState({ step: step + 1 });
-    };
-    
+    };    
 
     inputChange = input => e => {
         this.setState({
@@ -67,7 +48,7 @@ export default class Form extends Component {
             case 1:
                 return (
                     <PersonalInformation
-                        nextStep1={this.nextStep}
+                        nextStep={this.nextStep}
                         inputChange={this.inputChange}
                         values={values}
                     />
@@ -75,7 +56,7 @@ export default class Form extends Component {
             case 2:
                 return (
                     <JobInformation
-                        nextStep2={this.nextStep}
+                        nextStep={this.nextStep}
                         prevStep={this.prevStep}
                         inputChange={this.inputChange}
                         values={values}
