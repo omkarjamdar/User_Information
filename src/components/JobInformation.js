@@ -27,7 +27,7 @@ export class JobInformation extends Component {
             aria-valuenow="70"
             aria-valuemin="0"
             aria-valuemax="100"
-            style={{ width: "66.66%" }}
+            style={{ width: "66.65%" }}
           >
             {values.step}
           </div>
